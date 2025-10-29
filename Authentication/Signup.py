@@ -1,66 +1,58 @@
 import json
 import os
 import getpass
-import re
+from Validation.valid_email import validate_email
+from Validation.valid_password import validate_password
+from Validation.valid_name import validate_name
+from logs.log import log_action
 
-USER_Path = os.path.join("Databass", "customerdetails.json")
-
-def load_users():
-    if not os.path.exists(USER_Path):
-        os.makedirs(os.path.dirname(USER_Path), exist_ok=True)
-        with open(USER_Path, "w") as f:
-            json.dump([], f)
-    with open(USER_Path, "r") as f:
-        return json.load(f)
-
-def save_users(users):
-    with open(USER_Path, "w") as f:
-        json.dump(users, f, indent=4)
+USERS_FILE = os.path.join("Database", "customerdetails.json")
 
 def signup_user():
-    print("\n===== USER SIGNUP =====")
-    users = load_users()
-    username = input("Enter username: ").strip()
+    os.makedirs("Database", exist_ok=True)
+    print("\n=== SIGN UP ===")
+    name = input("Enter your name: ").strip()
+    if not validate_name(name):
+        print(" Invalid name. Only alphabets and spaces allowed.")
+        input("Press Enter to continue...")
+        return
 
-    for user in users:
-        if user["username"].lower() == username.lower():
-            print("Username already exists! Please choose another.")
-            return
+    email = input("Enter your email: ").strip()
+    if not validate_email(email):
+        print(" Invalid email format.")
+        input("Press Enter to continue...")
+        return
 
-    while True:
-        password = getpass.getpass("Enter password (8 characters): ")
-        confirm_password = getpass.getpass("Confirm password: ")
+    password = getpass.getpass("Enter password: ")
+    if not validate_password(password):
+        print(" Password must be at least 8 chars, include upper, lower, digit, special.")
+        input("Press Enter to continue...")
+        return
 
-        if password != confirm_password:
-            print("Passwords do not match! Try again.")
-            continue
-        if len(password) != 8:
-            print("Password must be exactly 8 characters long.")
-            continue
-        if password == "00000000":
-            print("⚠️ Password cannot be '00000000'. Choose a stronger password.")
-            continue
-        break
+    role = input("Enter role (admin/staff): ").strip().lower()
+    if role not in ["admin", "staff"]:
+        print(" Invalid role. Choose either 'admin' or 'staff'.")
+        input("Press Enter to continue...")
+        return
 
-    email = input("Enter email: ").strip()
+    data = []
+    if os.path.exists(USERS_FILE):
+        try:
+            with open(USERS_FILE, "r") as f:
+                data = json.load(f)
+        except Exception:
+            data = []
 
-    while True:
-        phone = input("Enter phone number: ").strip()
-        if not re.match(r'^\d{10}$', phone):
-            print("⚠️ Phone number must be exactly 10 digits (e.g., 9876543210).")
-            continue
-        if phone == "0000000000":
-            print("⚠️ Phone number cannot be '0000000000'. Enter a valid number.")
-            continue
-        break
+    if any(u.get("email") == email for u in data):
+        print(" User already exists.")
+        input("Press Enter to continue...")
+        return
 
-    new_user = {
-        "username": username,
-        "password": password,
-        "email": email,
-        "phone": phone
-    }
+    new_user = {"name": name, "email": email, "password": password, "role": role}
+    data.append(new_user)
+    with open(USERS_FILE, "w") as f:
+        json.dump(data, f, indent=4)
 
-    users.append(new_user)
-    save_users(users)
-    print(f"Signup successful! Welcome, {username}!")
+    log_action(f"New user signed up: {email} ({role})")
+    print(" Signup successful!")
+    input("Press Enter to continue...")

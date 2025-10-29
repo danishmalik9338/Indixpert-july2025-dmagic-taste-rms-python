@@ -1,0 +1,38 @@
+[
+    {
+        "bill_id": "BILL-352737",
+        "order_id": "ORD-31F1D1",
+        "items": [
+            {
+                "item": "Paneer Thali",
+                "qty": 2,
+                "type": "Veg",
+                "portion": "Full",
+                "price": 200,
+                "line_total": 400
+            }
+        ],
+        "total_amount": 400,
+        "payment_mode": "UPI",
+        "date": "2025-10-28",
+        "time": "20:53:20"
+    },
+    {
+        "bill_id": "BILL-09E30A",
+        "order_id": "ORD-E591D3",
+        "items": [
+            {
+                "item": "Fish Curry",
+                "qty": 3,
+                "type": "Non-Veg",
+                "portion": "Full",
+                "price": 280,
+                "line_total": 840
+            }
+        ],
+        "total_amount": 840,
+        "payment_mode": "Debit Card",
+        "date": "2025-10-29",
+        "time": "14:41:59"
+    }
+]

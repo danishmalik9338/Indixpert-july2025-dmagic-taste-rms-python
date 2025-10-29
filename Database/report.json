@@ -1,0 +1,39 @@
+{
+    "report_date": "2025-10-29 14:25:27",
+    "total_orders": 2,
+    "total_sales": 400,
+    "top_3_orders": [
+        {
+            "order_id": "ORD-31F1D1",
+            "items": [
+                {
+                    "item": "Paneer Thali",
+                    "id": 11,
+                    "type": "Veg",
+                    "qty": 2,
+                    "price_half": 130,
+                    "price_full": 200
+                }
+            ],
+            "date": "2025-10-28",
+            "time": "20:49:54",
+            "total_amount": 400
+        },
+        {
+            "order_id": "ORD-347F52",
+            "items": [
+                {
+                    "item": "Buttermilk",
+                    "id": 100,
+                    "type": "Veg",
+                    "qty": 2,
+                    "price_half": 40,
+                    "price_full": 60
+                }
+            ],
+            "date": "2025-10-28",
+            "time": "20:59:17",
+            "total_amount": 0
+        }
+    ]
+}

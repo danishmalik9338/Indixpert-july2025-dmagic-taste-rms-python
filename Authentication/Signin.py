@@ -1,26 +1,38 @@
 import json
 import os
 import getpass
+from Domain.admin_menu import admin_menu
+from Domain.staff_menu import staff_menu
+from logs.log import log_action
 
-USER_Path = os.path.join("Databass", "customerdetails.json")
-
-def load_users():
-    if not os.path.exists(USER_Path):
-        return []
-    with open(USER_Path, "r") as f:
-        return json.load(f)
+USERS_FILE = os.path.join("Database", "customerdetails.json")
 
 def signin_user():
-    print("\n===== USER LOGIN =====")
-    users = load_users()
+    os.makedirs("Database", exist_ok=True)
+    if not os.path.exists(USERS_FILE):
+        print(" No users found. Please sign up first.")
+        input("Press Enter to continue...")
+        return
 
-    username = input("Enter username: ").strip()
+    email = input("Enter email: ").strip()
     password = getpass.getpass("Enter password: ")
 
-    for user in users:
-        if user["username"].lower() == username.lower() and user["password"] == password:
-            print(f"Login successful! Welcome back, {username}!")
-            return True
+    try:
+        with open(USERS_FILE, "r") as f:
+            users = json.load(f)
+    except Exception:
+        users = []
 
-    print("Invalid username or password!")
-    return False
+    for u in users:
+        if u.get("email") == email and u.get("password") == password:
+            print(f"\n Login successful! Welcome {u.get('name').title()} ({u.get('role').upper()})")
+            log_action(f"User logged in: {email}")
+            input("Press Enter to continue...")
+            if u.get("role") == "admin":
+                admin_menu(u.get("name"))
+            else:
+                staff_menu(u.get("name"))
+            return
+
+    print(" Invalid credentials.")
+    input("Press Enter to continue...")

@@ -1,0 +1,96 @@
+
+================================================================================
+TIMESTAMP : 2025-10-28 11:44:41
+ERROR : could not convert string to float: 'edsefdr'
+TRACEBACK : Traceback (most recent call last):
+  File "d:\Github code\Indixpert-july2025-dmagic-taste-rms-python\Domain\admin_menu.py", line 29, in admin_menu
+    update_menu()
+  File "d:\Github code\Indixpert-july2025-dmagic-taste-rms-python\Domain\update_menu.py", line 17, in update_menu
+    categories = list(menu_data.keys())
+ValueError: could not convert string to float: 'edsefdr'
+
+================================================================================
+
+================================================================================
+TIMESTAMP : 2025-10-28 11:44:47
+ERROR : could not convert string to float: 'fd'
+TRACEBACK : Traceback (most recent call last):
+  File "d:\Github code\Indixpert-july2025-dmagic-taste-rms-python\Domain\admin_menu.py", line 29, in admin_menu
+    update_menu()
+  File "d:\Github code\Indixpert-july2025-dmagic-taste-rms-python\Domain\update_menu.py", line 17, in update_menu
+    categories = list(menu_data.keys())
+ValueError: could not convert string to float: 'fd'
+
+================================================================================
+
+================================================================================
+TIMESTAMP : 2025-10-28 11:45:30
+ERROR : could not convert string to float: 'sd'
+TRACEBACK : Traceback (most recent call last):
+  File "d:\Github code\Indixpert-july2025-dmagic-taste-rms-python\Domain\admin_menu.py", line 29, in admin_menu
+    update_menu()
+  File "d:\Github code\Indixpert-july2025-dmagic-taste-rms-python\Domain\update_menu.py", line 17, in update_menu
+    categories = list(menu_data.keys())
+ValueError: could not convert string to float: 'sd'
+
+================================================================================
+
+================================================================================
+TIMESTAMP : 2025-10-28 11:51:29
+ERROR : string indices must be integers
+TRACEBACK : Traceback (most recent call last):
+  File "d:\Github code\Indixpert-july2025-dmagic-taste-rms-python\Domain\admin_menu.py", line 29, in admin_menu
+    update_menu()
+  File "d:\Github code\Indixpert-july2025-dmagic-taste-rms-python\Domain\update_menu.py", line 20, in update_menu
+    choice = input("Enter your choice: ")
+TypeError: string indices must be integers
+
+================================================================================
+
+================================================================================
+TIMESTAMP : 2025-10-28 11:51:59
+ERROR : string indices must be integers
+TRACEBACK : Traceback (most recent call last):
+  File "d:\Github code\Indixpert-july2025-dmagic-taste-rms-python\Domain\admin_menu.py", line 33, in admin_menu
+    search_menu()
+  File "d:\Github code\Indixpert-july2025-dmagic-taste-rms-python\Domain\search_menu.py", line 13, in search_menu
+    results = [item for item in menu if search_name in item["item_name"].lower()]
+  File "d:\Github code\Indixpert-july2025-dmagic-taste-rms-python\Domain\search_menu.py", line 13, in <listcomp>
+    results = [item for item in menu if search_name in item["item_name"].lower()]
+TypeError: string indices must be integers
+
+================================================================================
+
+================================================================================
+TIMESTAMP : 2025-10-28 12:00:11
+ERROR : string indices must be integers
+TRACEBACK : Traceback (most recent call last):
+  File "d:\Github code\Indixpert-july2025-dmagic-taste-rms-python\Domain\admin_menu.py", line 29, in admin_menu
+    update_menu()
+  File "d:\Github code\Indixpert-july2025-dmagic-taste-rms-python\Domain\update_menu.py", line 20, in update_menu
+    choice = input("Enter your choice: ")
+TypeError: string indices must be integers
+
+================================================================================
+[2025-10-28 20:41:40] ACTION: New user signed up: naseem@gmail.com (admin)
+[2025-10-28 20:42:57] ACTION: User logged in: naseem@gmail.com
+[2025-10-28 20:57:06] ACTION: New user signed up: zeeshan123@gmail.com (staff)
+[2025-10-28 20:57:41] ACTION: User logged in: zeeshan123@gmail.com
+[2025-10-28 21:03:02] ACTION: Application exited by user.
+[2025-10-28 21:03:47] ACTION: New user signed up: rohit@gmail.com (admin)
+[2025-10-28 21:04:16] ACTION: User logged in: rohit@gmail.com
+[2025-10-28 21:08:53] ACTION: New user signed up: alfaiz@gmail.com (admin)
+[2025-10-28 21:09:20] ACTION: User logged in: alfaiz@gmail.com
+[2025-10-28 21:09:43] ACTION: Application exited by user.
+[2025-10-28 21:13:53] ACTION: New user signed up: bhola@gmail.com (admin)
+[2025-10-28 21:14:20] ACTION: User logged in: bhola@gmail.com
+[2025-10-28 21:15:28] ACTION: Application exited by user.
+[2025-10-29 14:21:19] ACTION: New user signed up: faizan123@gmail.com (admin)
+[2025-10-29 14:22:33] ACTION: User logged in: faizan123@gmail.com
+[2025-10-29 14:25:45] ACTION: Application exited by user.
+[2025-10-29 14:30:22] ACTION: User logged in: faizan123@gmail.com
+[2025-10-29 14:37:32] ACTION: New user signed up: sohil123@gmail.com (staff)
+[2025-10-29 14:38:08] ACTION: User logged in: sohil123@gmail.com
+[2025-10-29 14:42:59] ACTION: Application exited by user.
+[2025-10-29 14:49:05] ACTION: User logged in: sohil123@gmail.com
+[2025-10-29 14:50:27] ACTION: User logged in: danish123@gmail.com

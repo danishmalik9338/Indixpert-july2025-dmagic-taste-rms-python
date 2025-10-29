@@ -1,0 +1,51 @@
+[
+    {
+        "username": "Danish Malik",
+        "email": "danish@gmail.com",
+        "password": "Danish@123",
+        "role": "Admin"
+    },
+    {
+        "username": "Rahul",
+        "email": "staff1@gmail.com",
+        "password": "Staff@123",
+        "role": "Staff"
+    },
+    {
+        "username": "Monish Malik",
+        "email": "monish@gmail.com",
+        "password": "Sana@123",
+        "role": "Admin"
+    },
+    {
+        "name": "danish",
+        "email": "danish123@gmail.com",
+        "password": "Danish@123",
+        "role": "admin"
+    },
+    {
+        "name": "saif",
+        "email": "saif123@gmail.com",
+        "password": "Saif@1234",
+        "role": "admin"
+    },
+    {
+        "name": "arman",
+        "email": "arman123@gmail.com",
+        "password": "Arman@123",
+        "role": "staff"
+    },
+    {
+        "name": "bhola",
+        "email": "bhola@gmail.com",
+        "password": "Bhola@123",
+        "role": "admin"
+    },
+
+    {
+        "name": "sohil",
+        "email": "sohil123@gmail.com",
+        "password": "Sohil@123",
+        "role": "staff"
+    }
+]
