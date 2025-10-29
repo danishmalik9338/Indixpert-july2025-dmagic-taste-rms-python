@@ -91,15 +91,13 @@
   ],
 
   "beverages": [
-    {"id": 91, "item": "Masala Tea", "type": "Veg", "half_plate": 20, "full_plate": 30},
-    {"id": 92, "item": "Coffee", "type": "Veg", "half_plate": 30, "full_plate": 50},
-    {"id": 93, "item": "Cold Coffee", "type": "Veg", "half_plate": 60, "full_plate": 90},
-    {"id": 94, "item": "Mango Shake", "type": "Veg", "half_plate": 70, "full_plate": 110},
-    {"id": 95, "item": "Banana Shake", "type": "Veg", "half_plate": 70, "full_plate": 110},
-    {"id": 96, "item": "Soft Drink", "type": "Veg", "half_plate": 40, "full_plate": 60},
-    {"id": 97, "item": "Fresh Lime Soda", "type": "Veg", "half_plate": 50, "full_plate": 80},
-    {"id": 98, "item": "Water Bottle", "type": "Veg", "half_plate": 20, "full_plate": 20},
-    {"id": 99, "item": "Orange Juice", "type": "Veg", "half_plate": 70, "full_plate": 120},
-    {"id": 100, "item": "Buttermilk", "type": "Veg", "half_plate": 40, "full_plate": 60}
+    {"id": 91, "item": "Masala Tea", "type": "Veg", "half": 20, "full": 30},
+    {"id": 92, "item": "Coffee", "type": "Veg", "half": 30, "full": 50},
+    {"id": 93, "item": "Cold Coffee", "type": "Veg", "half": 60, "full": 90},
+    {"id": 94, "item": "Mango Shake", "type": "Veg", "half": 70, "full": 110},
+    {"id": 95, "item": "Banana Shake", "type": "Veg", "half": 70, "full": 110},
+    {"id": 96, "item": "Soft Drink", "type": "Veg", "half": 40, "full": 60},
+    {"id": 97, "item": "Orange Juice", "type": "Veg", "half": 70, "full": 120},
+    {"id": 98, "item": "Buttermilk", "type": "Veg", "half": 40, "full": 60}
   ]
 }
